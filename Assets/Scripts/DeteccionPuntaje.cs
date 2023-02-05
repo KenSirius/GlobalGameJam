@@ -10,6 +10,8 @@ public class DeteccionPuntaje : MonoBehaviour
     public float contadorTiempoFuera=0;
     public bool restar=false;
     public int BarraLograda=10;
+
+    public GameObject ObjetoBarra;
     public GanarPuntaje barraLogro;
 
     public Animator animator;
@@ -18,6 +20,8 @@ public class DeteccionPuntaje : MonoBehaviour
     void Start()
     {
         rigidbodyPuntaje = GetComponent<Rigidbody2D>();
+        barraLogro = ObjetoBarra.GetComponent<GanarPuntaje>();
+        Debug.Log(BarraLograda+"+++"+contador);
         barraLogro.InicializarBarra(BarraLograda);
         barraLogro.CambiarBarraActual(contador);
         animator = objeto.GetComponent<Animator>();
@@ -40,6 +44,10 @@ public class DeteccionPuntaje : MonoBehaviour
         {
             Debug.Log("Ganaste");
             animator.SetBool("SePico",true);
+        }
+        if(contador<=0)
+        {
+            contador=0;
         }
     }
     void OnTriggerStay2D(Collider2D otro)

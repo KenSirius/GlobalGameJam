@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class GanarPuntaje : MonoBehaviour
 {
+    public GameObject objeto;
     private Slider slider;
     // Start is called before the first frame update
     void Start()
-    {
-        slider= GetComponent<Slider>();
+    {   
+        objeto= GameObject.Find("BarraCompleta");     
+        slider=objeto.GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -19,10 +21,14 @@ public class GanarPuntaje : MonoBehaviour
     }
     public void CambiarBarraActual(int barraActual)
     {
+        Debug.Log("entro a cambiar barra. El valor recibido fue: "+ barraActual);
         slider.value = barraActual;
+        
+        Debug.Log("valor posterior al cambio: "+slider.value);
     }
     public void InicializarBarra(int barra)
     {
+        Debug.Log("entro a inicializar barra");
         CambiarBarraActual(barra);
         CambiarBarraMaxima(barra);
     }
