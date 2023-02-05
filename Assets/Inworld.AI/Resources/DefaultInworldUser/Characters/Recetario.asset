@@ -23,7 +23,7 @@ MonoBehaviour:
   triggers: []
   scenes:
   - workspaces/default-mlqgdam6khipxu4hrpbyfg/scenes/recetario
-  modelUri: 
-  posUri: 
-  previewImgUri: 
+  modelUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_model/3ff67b67-d804-41b7-bc97-70f26a4a7955.glb
+  posUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/3ff67b67-d804-41b7-bc97-70f26a4a7955_posture.jpg
+  previewImgUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/3ff67b67-d804-41b7-bc97-70f26a4a7955_portrait.jpg
   characterID: 59ab8236-7519-43df-a8dd-c696349b7b6a
