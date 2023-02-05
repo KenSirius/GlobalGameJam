@@ -10,6 +10,7 @@ public class Barra : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // la variable los componenetes de rigidbody
         rigidbodyBarra = GetComponent<Rigidbody2D>();
     }
 
@@ -17,8 +18,8 @@ public class Barra : MonoBehaviour
     void Update()
     {
         ClickIzquierdo =Input.GetMouseButton(0);
-        if(ClickIzquierdo)
-            Debug.Log("HaceClick");
+        // if(ClickIzquierdo)
+        //     Debug.Log("HaceClick");
     }  
     void FixedUpdate()
     {
