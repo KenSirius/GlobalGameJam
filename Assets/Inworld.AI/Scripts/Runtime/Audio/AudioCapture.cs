@@ -14,7 +14,7 @@ namespace Inworld
     /// </summary>
     public class AudioCapture : MonoBehaviour
     {
-        [SerializeField] int m_AudioRate = 16000;
+        [SerializeField] int m_AudioRate = 26000;
         [SerializeField] int m_BufferSeconds = 1;
         // Size of audioclip used to collect information, need to be big enough to keep up with collect. 
         int m_BufferSize;
