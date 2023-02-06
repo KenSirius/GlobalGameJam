@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0447596b1a67de49ba5720fda0bdabe, type: 3}
+  m_Name: Recetario
+  m_EditorClassIdentifier: 
+  characterName: Recetario
+  brain: workspaces/default-mlqgdam6khipxu4hrpbyfg/characters/recetario
+  avatar: {fileID: 0}
+  workspace: workspaces/default-mlqgdam6khipxu4hrpbyfg
+  currentScene: workspaces/default-mlqgdam6khipxu4hrpbyfg/characters/recetario
+  ownerShip: 0
+  defaultThumbnail: {fileID: 0}
+  index: 0
+  triggers: []
+  scenes:
+  - workspaces/default-mlqgdam6khipxu4hrpbyfg/scenes/recetario
+  modelUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_model/3ff67b67-d804-41b7-bc97-70f26a4a7955.glb
+  posUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/3ff67b67-d804-41b7-bc97-70f26a4a7955_posture.jpg
+  previewImgUri: https://storage.googleapis.com/inworld-ai-usercontent-prod/rpm_image/3ff67b67-d804-41b7-bc97-70f26a4a7955_portrait.jpg
+  characterID: ab2e5e7f-2ce7-4b81-8907-9df651fb6a76
