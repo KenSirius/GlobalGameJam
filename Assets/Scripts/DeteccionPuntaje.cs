@@ -5,11 +5,11 @@ using UnityEngine;
 public class DeteccionPuntaje : MonoBehaviour
 {
     private Rigidbody2D rigidbodyPuntaje;
-    public int contador=0;
-    public float contadorTiempo=0;
-    public float contadorTiempoFuera=0;
+    public float contador=0f;
+    public float contadorTiempo=0f;
+    public float contadorTiempoFuera=0f;
     public bool restar=false;
-    public int BarraLograda=10;
+    public float BarraLograda=10f;
 
     public GameObject ObjetoBarra;
     public GanarPuntaje barraLogro;
