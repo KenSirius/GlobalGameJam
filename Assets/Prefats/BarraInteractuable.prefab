@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1809849581699732852}
   - component: {fileID: 1809849581699732853}
   - component: {fileID: 1809849581699732854}
+  - component: {fileID: 7721456961829656502}
+  - component: {fileID: 8811466801555983789}
   m_Layer: 0
   m_Name: BarraPuntuadora
   m_TagString: Untagged
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 83d31de8cf3d12b4fb2cab261326ace1, type: 3}
   m_Color: {r: 0.671, g: 0.26951903, b: 0.17446, a: 1}
   m_FlipX: 0
@@ -133,6 +135,42 @@ MonoBehaviour:
   barraLogro: {fileID: 0}
   animator: {fileID: 0}
   objeto: {fileID: 0}
+--- !u!50 &7721456961829656502
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809849581699732848}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &8811466801555983789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809849581699732848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88220699cde4244449654731286dc767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbodyBarAli: {fileID: 0}
+  VelSubida: 0.5
+  SwSube: 1
 --- !u!1 &1809849582810981083
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +450,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 388cbd295eda45f4481c2c1ba15ed90b, type: 3}
   m_Color: {r: 0.46070665, g: 0.8207547, b: 0.54481167, a: 1}
   m_FlipX: 0
