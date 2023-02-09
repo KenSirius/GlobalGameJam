@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeteccionPuntaje : MonoBehaviour
 {
     private Rigidbody2D rigidbodyPuntaje;
-    public float contador=0f;
+    public float contador=5f;
     public float contadorTiempo=0f;
     public float contadorTiempoFuera=0f;
     public bool restar=false;
@@ -16,12 +16,18 @@ public class DeteccionPuntaje : MonoBehaviour
 
     public Animator animator;
     public GameObject objeto;
+    [SerializeField] private float PuntajeGanado= 0f;
+    [SerializeField] private float PuntajePerdido= 0f;
+    [SerializeField] private GameObject ObjetoVapor;
+    [SerializeField] private GameObject ObjetoBarraInter;
+
+    [SerializeField] private GameObject Menufinal;
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         rigidbodyPuntaje = GetComponent<Rigidbody2D>();
         barraLogro = ObjetoBarra.GetComponent<GanarPuntaje>();
-        Debug.Log(BarraLograda+"+++"+contador);
+        //Debug.Log(BarraLograda+"+++"+contador);
         barraLogro.InicializarBarra(BarraLograda);
         barraLogro.CambiarBarraActual(contador);
         animator = objeto.GetComponent<Animator>();
@@ -34,20 +40,28 @@ public class DeteccionPuntaje : MonoBehaviour
             contadorTiempoFuera=Time.deltaTime+contadorTiempoFuera;            
             if(contadorTiempoFuera>1)
             {
-                contador=contador-2;
+                contador=contador-PuntajePerdido;
                 contadorTiempoFuera=0;
             }
         }
-        Debug.Log(contador);
+        //Debug.Log(contador);
         barraLogro.CambiarBarraActual(contador);
         if(contador==10)
         {
-            Debug.Log("Ganaste");
+            //Debug.Log("Ganaste");
             animator.SetBool("SePico",true);
+            ObjetoBarra.SetActive(false);
+            ObjetoVapor.SetActive(false);
+            ObjetoBarraInter.SetActive(false);
         }
         if(contador<=0)
         {
-            contador=0;
+            ObjetoBarra.SetActive(false);
+            ObjetoVapor.SetActive(false);
+            ObjetoBarraInter.SetActive(false);
+            objeto.SetActive(false);
+            Menufinal.SetActive(true);
+            Time.timeScale=0f;
         }
     }
     void OnTriggerStay2D(Collider2D otro)
@@ -59,14 +73,14 @@ public class DeteccionPuntaje : MonoBehaviour
             //Debug.Log(contadorTiempo+" --- "+contador);                   
             if(contadorTiempo>=1)            
             {
-                contador=contador+2;
+                contador=contador+PuntajeGanado;
                 contadorTiempo=0;
             }
         }
     }
     void OnTriggerExit2D(Collider2D otro)
     {
-        Debug.Log("Salio");
+        //Debug.Log("Salio");
         if(otro.CompareTag("Puntuador"))
         {
             restar=true;

@@ -10,19 +10,20 @@ public class ActDesact : MonoBehaviour
 
     public GameObject Recetario;
     public GameObject Ticket;
+    [SerializeField] private Animator animacionPlato;
     // Start is called before the first frame updateç
     void Start()
     {
         //AlimentoDesa = GameObject.Find("Carne");
-        BarraComple = GameObject.Find("BarraCompleta");
+        //BarraComple = GameObject.Find("BarraCompleta");
+        animacionPlato = GetComponent<Animator>();
         //BarraInter = GameObject.Find("BarraInteractuable");
         //Recetario = GameObject.Find("LibroReceta");
         //Ticket = GameObject.Find("Ticket");
     }
     public void ActivarOtros()
     {
-        
-        //Time.timeScale=0f;
+        animacionPlato.SetBool("SePico",true);
     }
     public void DesActivar()
     {

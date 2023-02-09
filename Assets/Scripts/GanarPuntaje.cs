@@ -22,13 +22,13 @@ public class GanarPuntaje : MonoBehaviour
     }
     public void CambiarBarraActual(float barraActual)
     {
-        Debug.Log("entro a cambiar barra. El valor recibido fue: "+ barraActual);
+        //Debug.Log("entro a cambiar barra. El valor recibido fue: "+ barraActual);
         slider.SetValueWithoutNotify(barraActual);
-        Debug.Log("valor posterior al cambio: "+ slider.value);
+        //Debug.Log("valor posterior al cambio: "+ slider.value);
     }
     public void InicializarBarra(float barra)
     {
-        Debug.Log("entro a inicializar barra");
+        //Debug.Log("entro a inicializar barra");
         CambiarBarraActual(barra);
         CambiarBarraMaxima(barra);
     }
